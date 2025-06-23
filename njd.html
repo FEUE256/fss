@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Team FEUE FSS</title>
+  <link rel="shortcut icon" href="fss.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      margin: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #0055aa;
+    }
+    .team-member {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      padding: 1rem 1.5rem;
+      margin: 1rem auto;
+      max-width: 400px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .team-member.active {
+      background-color: #0055aa;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,85,170,0.7);
+    }
+    .name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+    .role {
+      font-style: italic;
+      color: inherit;
+    }
+
+    header {
+        background-color: #0078d4;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 1rem;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Team NJD</h1>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="credits.html">Credits</a>
+            <a href="njd.html">NJD</a>
+            <a href="download.html">Download</a>
+            <a href="HAC.html">Help and Contact</a>
+        </nav>
+    </header>
+
+  <div class="team-member" tabindex="0">
+    <div class="name">Nils Efverman</div>
+    <div class="role">Huvudutvecklare, mjukvaruutvecklare och skapare av FEUE och FEUE FSS</div>
+  </div>
+  <div class="team-member" tabindex="0">
+    <div class="name">Joe Wells</div>
+    <div class="role">Assistentutvecklare, grafisk designer och medskapare av FEUE FSS</div>
+  </div>
+  <div class="team-member" tabindex="0">
+    <div class="name">Dexter Grant</div>
+    <div class="role">Medarbetare, testare och felsökare i koden till FEUE FSS</div>
+  </div>
+
+  <!-- Footer med copyright -->
+<footer style="text-align:center; padding:10px; font-size:14px; color:#666;">
+  &copy; 2025 FÈUE FSS (Förenta Èvelutionernas Ungivärsites Elektronik Fix System Services) - NJD. All rights reserved.
+</footer>
+  
+  <script>
+    const members = document.querySelectorAll('.team-member');
+
+    members.forEach(member => {
+      member.addEventListener('click', () => {
+        member.classList.add('active');
+        setTimeout(() => {
+          member.classList.remove('active');
+        }, 800);
+      });
+
+      // För att stödja keyboard: Enter eller Space aktiverar också animation
+      member.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          member.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
