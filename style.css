@@ -39,6 +39,26 @@ a {
     color: black;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    border: 1px solid #666;
+    padding: 12px 20px;
+    text-align: left;
+  }
+  thead {
+    background-color: #222;
+    color: #fff;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+
 .center {
     margin: 0 auto; /* 👈 Center in X (horizontal) */
     color: black;
