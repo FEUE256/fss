@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cyber:Bott OS Edition</title>
+<style>
+  body {
+    background-color: #0f111a;
+    color: #00ff99;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  body.light {
+    background-color: #f0f0f0;
+    color: #007733;
+  }
+  header {
+    background: #02110f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ff99;
+    transition: background 0.5s, border-color 0.5s;
+  }
+  body.light header {
+    background: #d0f0d0;
+    border-color: #007733;
+  }
+  h1 {
+    margin: 0;
+    font-weight: normal;
+  }
+  .content {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .roadmap {
+    background: #022217;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #00ff99;
+    display: none;
+    transition: background 0.5s, border-color 0.5s;
+  }
+  body.light .roadmap {
+    background: #d0f5d0;
+    border-color: #007733;
+  }
+  button {
+    background: #00ff99;
+    color: #02110f;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background: #00cc77;
+  }
+  #toggleTheme {
+    float: right;
+    background: #005533;
+    color: #aaffcc;
+    font-weight: normal;
+    padding: 8px 15px;
+  }
+  #toggleTheme:hover {
+    background: #007733;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #00ff99;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cyber:Bott OS Edition</h1>
+  <p>Welcome to the future of OS development</p>
+</header>
+
+<div class="content">
+  <section>
+    <h2>About</h2>
+    <p>
+      Cyber:Bott OS Edition is a bold new operating system project by FÈUE FSS, and it's the biggest project yet from FÈUE and FSS.
+    </p>
+  </section>
+
+  <section class="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>First Hello World on screen</li>
+      <li>Build a stable API</li>
+      <li>Get a working shutdown GUI</li>
+      <li>First Public Release of C:B OS Edition in August to December 2025</li>
+    </ul>
+  </section>
+
+  <button id="toggleRoadmap">Show Roadmap</button>
+  <button id="toggleTheme">Switch to Light Mode</button>
+</div>
+
+<footer>
+  &copy; 2025 FÈUE FSS | All rights reserved
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $('#toggleRoadmap').click(function() {
+    $('.roadmap').slideToggle();
+    $(this).text(function(i, text){
+      return text === "Show Roadmap" ? "Hide Roadmap" : "Show Roadmap";
+    });
+  });
+
+  $('#toggleTheme').click(function() {
+    $('body').toggleClass('light');
+    const isLight = $('body').hasClass('light');
+    $(this).text(isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+  });
+</script>
+
+</body>
+</html>
