@@ -6,6 +6,69 @@
     <title>How to set it all up?</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="fss.ico" type="image/x-icon" />
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        code, kbd {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #eee;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,25 +78,25 @@
             <a href="credits.html">Credits</a>
             <a href="njd.html">NJD</a>
             <a href="download.html">Download</a>
-            <a href="HAC.html">Help and Contact</a>
+            <a href="HAC.html">Help & Contact</a>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>fss.dll</h2>
+            <h2>Install and use <code>fss.dll</code></h2>
             <ol>
-                <li>Download the DLL from <a href="https://feue256.github.io/fss/download.html" class="a_c">here</a>.</li>
-                <li>Press <kbd>Windows</kbd> + <kbd>R</kbd>, type <code>powershell</code> and press Enter.</li>
-                <li>Navigate to the folder where the DLL is located using:<br><code>cd C:\path\to\the\dll</code></li>
-                <li>Load the DLL using:<br><code>Add-Type -Path .\fss.dll</code></li>
-                <li>You can now use the DLL in PowerShell like this:<br><code>[fss.Class]::Func()</code></li>
+                <li>Download the DLL from <a href="https://feue256.github.io/fss/download.html" class="a_c">this page</a>.</li>
+                <li>Press <kbd>Windows</kbd> + <kbd>R</kbd>, type <code>powershell</code> and press <kbd>Enter</kbd>.</li>
+                <li>Navigate to the download folder:<br><code>cd C:\Path\To\DLL</code></li>
+                <li>Load the DLL:<br><code>Add-Type -Path .\fss.dll</code></li>
+                <li>Use the functions like this:<br><code>[fss.Class]::YourFunction()</code></li>
             </ol>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 NJD – FSS (FSS is only supported on Windows 11 Pro and later)</p>
+        <p>&copy; 2025 NJD – FSS (Only for Windows 11 Pro and newer)</p>
     </footer>
 </body>
 </html>
