@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to set all up?</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="fss.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to set it all up?</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="fss.ico" type="image/x-icon" />
 </head>
 <body>
     <header>
         <h1>How to set it all up?</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="credits.html">Credits</a>
-        <a href="njd.html">NJD</a>
-        <a href="download.html">Download</a>
-        <a href="HAC.html">Help and Contact</a>
-    </nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="credits.html">Credits</a>
+            <a href="njd.html">NJD</a>
+            <a href="download.html">Download</a>
+            <a href="HAC.html">Help and Contact</a>
+        </nav>
     </header>
-    <main>First install <a href="https://nodejs.org/en/download" class="a_c" >NodeJS</a></h2>
+
+    <main>
         <section>
-            <h2>If you have a USB stick with the files:</h2>
-            <ol start="1">
-                <li>Plug in the USB stick in to your computer</li>
-                <li>Make sure that the USB stick is device E:\ (If it don't go to If you alredy have the E:\ drive on this page)</li>
-                <li>Go in to the USB drive and click om "FSS_Run"</li>
-                <li>Do what the program tell you to do and you is in FFCP</li>
-            </ol>
-        </section>
-        <br>
-        <section id="AE">
-            <h2>If you alredy have the E:\ drive</h2>
-            <ol start="1">
-                <li>Download and Extract the zip file from the <a href="download.html" class="a_c">Download page</a></li>
-                <li>Copy over the files to the E:\ drive (Your drive most be as minimal 100 GB)</li>
-                <li>Go in to the E:\ drive and click on FSS_Run</li>
-                <li>Do what the program tell you to do and you is in FFCP</li>
+            <h2>fss.dll</h2>
+            <ol>
+                <li>Download the DLL from <a href="https://feue256.github.io/fss/download.html" class="a_c">here</a>.</li>
+                <li>Press <kbd>Windows</kbd> + <kbd>R</kbd>, type <code>powershell</code> and press Enter.</li>
+                <li>Navigate to the folder where the DLL is located using:<br><code>cd C:\path\to\the\dll</code></li>
+                <li>Load the DLL using:<br><code>Add-Type -Path .\fss.dll</code></li>
+                <li>You can now use the DLL in PowerShell like this:<br><code>[fss.Class]::Func()</code></li>
             </ol>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 NJD – FSS (FSS is only for Windows 11 pro and later)</p>
+        <p>&copy; 2025 NJD – FSS (FSS is only supported on Windows 11 Pro and later)</p>
     </footer>
 </body>
 </html>
