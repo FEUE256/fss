@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cyber:Bott OS Edition</title>
-<link href="styles.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber:Bott OS Edition</title>
+  <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-<header>
-  <h1 id="pageTitle">Cyber:Bott OS Edition</h1>
-  <p>Welcome to the future of OS development in Linux</p>
-  <label for="fontSelector" style="color:#39ff14; margin-top:1rem; display:inline-block;">Choose Font:</label>
-  <select id="fontSelector" aria-label="Choose font for page">
-    <option value="'Audiowide', cursive" selected>Audiowide</option>
-    <option value="'Orbitron', monospace">Orbitron</option>
-    <option value="'Share Tech Mono', monospace">Share Tech Mono</option>
-    <option value="'Major Mono Display', monospace">Major Mono Display</option>
-  </select>
-</header>
+  <header>
+    <h1 id="pageTitle">Cyber:Bott OS Edition</h1>
+    <p>A visionary standalone operating system, engineered by FÈUE FSS</p>
+    <label for="fontSelector" style="color:#39ff14; margin-top:1rem; display:inline-block;">Choose Font:</label>
+    <select id="fontSelector" aria-label="Choose font for page">
+      <option value="'Audiowide', cursive" selected>Audiowide</option>
+      <option value="'Orbitron', monospace">Orbitron</option>
+      <option value="'Share Tech Mono', monospace">Share Tech Mono</option>
+      <option value="'Major Mono Display', monospace">Major Mono Display</option>
+    </select>
+  </header>
 
-<main>
-  <section>
-    <h2>About</h2>
-    <p>Cyber:Bott OS Edition is a bold new operating system project baset on Linux by <strong>FÈUE FSS</strong>, and it's the biggest project yet from FÈUE and FSS. This OS is only for <em>UEFI</em> and not BIOS!</p>
-  </section>
+  <main>
+    <section>
+      <h2>About</h2>
+      <p><strong>Cyber:Bott OS Edition</strong> is a bold and independent operating system developed from scratch by <strong>FÈUE FSS</strong>. It is <em>not</em> based on Linux or any other existing operating system. Designed exclusively for modern <em>UEFI</em> systems, it represents the future of OS innovation.</p>
+    </section>
 
-  <section>
-    <h2>Roadmap</h2>
-    <ul>
-      <li>First Hello World on screen</li>
-      <li>Build a stable API</li>
-      <li>Get a working shutdown GUI</li>
-      <li>First Public Release of C:B OS Edition in August to December 2025</li>
-    </ul>
-    <button id="toggleRoadmap">Switch to Light Mode</button>
-  </section>
+    <section>
+      <h2>Roadmap</h2>
+      <ul>
+        <li>Display "Hello World" on screen</li>
+        <li>Build a stable system API</li>
+        <li>Develop a graphical shutdown interface</li>
+        <li>First public release planned between August and December 2025</li>
+      </ul>
+      <button id="toggleRoadmap">Switch to Light Mode</button>
+    </section>
 
-  <section>
-    <h2>Features</h2>
-    <ul>
-      <li>A Info GUI</li>
-      <li>A Test Shutdown GUI</li>
-      <li>A Own API for FÈUE FSS C:B OS Edtion</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Informational GUI</li>
+        <li>Test Shutdown GUI</li>
+        <li>Custom API for FÈUE FSS Cyber:Bott OS Edition</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Download</h2>
-    <p>Coming soon! Stay tuned for the public release that are approxilimity 3 mounth after v.9.5.0</p>
-  </section>
+    <section>
+      <h2>Download</h2>
+      <p>Coming soon! The public release is scheduled approximately three months after version 9.5.0.</p>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Questions? Feedback? Reach out via email at <a href="https://mail.google.com/mail/u/0/?fs=1&to=feue.com1@outlook.com&su=Contact+from+Cyber:Boot:s+Website:&tf=cm" style="color:#39ff14;">feue.com1@outlook.com</a></p>
-  </section>
-</main>
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Questions or feedback? Reach out via email at
+        <a href="https://mail.google.com/mail/u/0/?fs=1&to=feue.com1@outlook.com&su=Contact+from+Cyber:Bott+OS+Website&tf=cm"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#39ff14;">
+          feue.com1@outlook.com
+        </a>
+      </p>
+    </section>
+  </main>
 
-<footer>
-  © 2025 FÈUE FSS | All rights reserved
-</footer>
+  <footer>
+    © 2025 FÈUE FSS | All rights reserved
+  </footer>
 
-<script>
+  <script>
     const toggleBtn = document.getElementById('toggleRoadmap');
-  const fontSelector = document.getElementById('fontSelector');
-  const pageTitle = document.getElementById('pageTitle');
+    const fontSelector = document.getElementById('fontSelector');
+    const pageTitle = document.getElementById('pageTitle');
 
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    if (document.body.classList.contains('light')) {
-      toggleBtn.textContent = 'Switch to Dark Mode';
-    } else {
-      toggleBtn.textContent = 'Switch to Light Mode';
-    }
-  });
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      toggleBtn.textContent = document.body.classList.contains('light') ?
+        'Switch to Dark Mode' : 'Switch to Light Mode';
+    });
 
-  fontSelector.addEventListener('change', () => {
-    document.body.style.fontFamily = fontSelector.value;
-    pageTitle.style.fontFamily = fontSelector.value;
-  });
-</script>
+    fontSelector.addEventListener('change', () => {
+      const font = fontSelector.value;
+      document.body.style.fontFamily = font;
+      pageTitle.style.fontFamily = font;
+    });
+  </script>
 </body>
 </html>
