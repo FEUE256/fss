@@ -7,7 +7,9 @@
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
+  <a href="#maincontent" class="skip-link">Skip to main content</a> <!-- Viktig för AAA -->
+
+  <header role="banner">
     <h1 id="pageTitle">Cyber:Bott OS Edition</h1>
     <p>A visionary standalone operating system, engineered by FÈUE FSS</p>
     <label for="fontSelector" style="color:#39ff14; margin-top:1rem; display:inline-block;">Choose Font:</label>
@@ -19,7 +21,7 @@
     </select>
   </header>
 
-  <main>
+  <main id="maincontent" role="main">
     <section>
       <h2>About</h2>
       <p><strong>Cyber:Bott OS Edition</strong> is a bold and independent operating system developed from scratch by <strong>FÈUE FSS</strong>. Designed exclusively for modern <em>UEFI</em> systems, it represents the future of OS innovation (a Hello World BIOS version is also available).</p>
@@ -47,40 +49,40 @@
     <section>
       <h2>Download</h2>
       <p>Coming soon for UEFI!</p>
-      <br>
-      <a href="boot_bios.img" download="Boot_BIOS.img">BIOS download (1 440 kB)</a>
+      <br />
+      <a href="boot_bios.img" download="Boot_BIOS.img" aria-label="Download BIOS boot image, size 1,440 kilobytes">BIOS download (1 440 kB)</a>
     </section>
 
     <section>
       <h2>Contact</h2>
       <p>
         Questions or feedback? Reach out via email at
-        <a href="mailto:feue.com1@outlook.com"
-           style="color:#39ff14;">
+        <a href="mailto:feue.com1@outlook.com" style="color:#39ff14;" aria-label="Send email to feue.com1 at outlook.com">
           feue.com1@outlook.com
         </a>
       </p>
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     © 2025 FÈUE FSS | All rights reserved
-    <br>
-   <button id="toggleRoadmap">Switch to Light Mode</button>
-    <br>
+    <br />
+    <button id="toggleRoadmap" aria-pressed="false" aria-label="Toggle light and dark mode">Switch to Light Mode</button>
+    <br />
     <p>
-      Portions of this source code are based on work by 
-    <a href="https://www.youtube.com/@quesofuego" target="_blank" rel="noopener noreferrer">Queso Fuego</a>, 
-    published under the 
-    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
-      Creative Commons Attribution 4.0 License
-    </a>. 
-    Original material available at 
-    <a href="https://www.youtube.com/playlist?list=PLT7NbkyNWaqZYHNLtOZ1MNxOt8myP5K0p" target="_blank" rel="noopener noreferrer">
-      this YouTube playlist
-    </a>.
+      Portions of this source code are based on work by
+      <a href="https://www.youtube.com/@quesofuego" target="_blank" rel="noopener noreferrer" aria-label="Open Queso Fuego's YouTube channel in a new tab">
+        Queso Fuego
+      </a>,
+      published under the
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" aria-label="Open Creative Commons Attribution 4.0 License details in a new tab">
+        Creative Commons Attribution 4.0 License
+      </a>.
+      Original material available at
+      <a href="https://www.youtube.com/playlist?list=PLT7NbkyNWaqZYHNLtOZ1MNxOt8myP5K0p" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube playlist in a new tab">
+        this YouTube playlist
+      </a>.
     </p>
-    <br>
   </footer>
 
   <script>
@@ -90,8 +92,9 @@
 
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('light');
-      toggleBtn.textContent = document.body.classList.contains('light') ?
-        'Switch to Dark Mode' : 'Switch to Light Mode';
+      const isLight = document.body.classList.contains('light');
+      toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+      toggleBtn.setAttribute('aria-pressed', isLight.toString());
     });
 
     fontSelector.addEventListener('change', () => {
